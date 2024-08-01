@@ -1,5 +1,4 @@
 import {DataTypes} from "sequelize"
-
 import {sequelize} from "../config/index"
 
 export const Products = sequelize.define("products", {
@@ -10,6 +9,14 @@ export const Products = sequelize.define("products", {
   price: {
     type: DataTypes.FLOAT,
     allowNull: false,
+  },
+  description: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  image: {
+    type: DataTypes.STRING,
+    allowNull: true,
   },
 });
 
